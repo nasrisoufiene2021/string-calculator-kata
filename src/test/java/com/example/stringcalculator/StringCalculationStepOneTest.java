@@ -12,7 +12,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-class StringCalculationTest {
+class StringCalculationStepOneTest {
 
     private final StringCalculator stringCalculator = new StringCalculator();
 
