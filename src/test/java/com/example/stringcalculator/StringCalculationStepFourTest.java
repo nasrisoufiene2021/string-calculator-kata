@@ -10,7 +10,7 @@ import java.util.stream.Stream;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-class StringCalculationStepThreeTest {
+class StringCalculationStepFourTest {
 
     private final StringCalculator stringCalculator = new StringCalculator();
 
@@ -23,10 +23,10 @@ class StringCalculationStepThreeTest {
 
     public static Stream<Arguments> shouldReturnTheSumWhenStringContainsNewLinesParams() {
         return Stream.of(
-                Arguments.of("1,2\n8,9", 20),
-                Arguments.of("10\n20,8\n9\n0", 47),
-                Arguments.of("5\n5\n6\n0", 16),
-                Arguments.of("7\n3,6,4,8,2\n100\n200\n300\n5,5,60", 700)
+                Arguments.of("//;\n1;2;8;9", 20),
+                Arguments.of("10;20;8;9;0", 47),
+                Arguments.of("//,\n5,5,6,0", 16),
+                Arguments.of("//:\n7:3:100", 110)
         );
     }
 

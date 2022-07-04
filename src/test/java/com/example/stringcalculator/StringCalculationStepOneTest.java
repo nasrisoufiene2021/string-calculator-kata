@@ -39,12 +39,12 @@ class StringCalculationStepOneTest {
 
     public static Stream<Arguments> shouldReturnTheSumWhenStringContainsTowNumbersParams() {
         return Stream.of(
-                Arguments.of("1,2", 3),
-                Arguments.of("4,2", 6),
-                Arguments.of("8,9", 17),
-                Arguments.of("5,0", 5),
-                Arguments.of("0,0", 0),
-                Arguments.of("0,4", 4)
+                Arguments.of("1;2", 3),
+                Arguments.of("4;2", 6),
+                Arguments.of("8;9", 17),
+                Arguments.of("5;0", 5),
+                Arguments.of("0;0", 0),
+                Arguments.of("0;4", 4)
         );
     }
 
