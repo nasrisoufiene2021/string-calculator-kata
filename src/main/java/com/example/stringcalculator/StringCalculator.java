@@ -19,8 +19,15 @@ public class StringCalculator {
             delim = String.valueOf(lines[0].charAt(2));
         }
 
+        String[] numbrtArray = lineNumbers.split(delim);
+        for (String val : numbrtArray) {
+            if (Integer.parseInt(val) < -1) {
+                throw new IllegalArgumentException("negatives not allowed");
+            }
+        }
+
         lineNumbers.split(delim);
-        return Arrays.stream(lineNumbers.split(delim))
+        return Arrays.stream(numbrtArray)
                 .mapToInt(Integer::parseInt).sum();
     }
 }
